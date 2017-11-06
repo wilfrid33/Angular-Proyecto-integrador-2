@@ -1,0 +1,78 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+
+</script>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body" >
+        <div class="row" style="font-size:18px" *ngIf='clients' style="margin-left: 20px">
+            <div  class="text-left" style="font-size:18px ; margin-left:12px">Nombres:</div>
+
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Nombre Completo" [(ngModel)]='clients.NombreCliente' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Apellidos:</div>
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Apellidos" [(ngModel)]='clients.ApellidosCliente' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Dni:</div>
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Correo" [(ngModel)]='clients.Dni' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Direccion:</div>
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Direccion" [(ngModel)]='clients.Direccion' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Teléfono:</div>
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Telefono" [(ngModel)]='clients.TelefonoCliente' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Email:</div>
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Email" [(ngModel)]='clients.Email' /> </div>
+            <br>
+            <div [formGroup]="form"  >
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Contraseña:</div>
+            <div class="form-group text-left">
+                <input [formGroup]="form" id="password" formControlName="password" class="form-control" style="width:200px;border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px"
+                    type="text" placeholder="Contraseña" [(ngModel)]='clients.Password' /> </div>
+            
+            <div class="text-left " style="font-size:18px ; margin-left:12px"> Confirmar Contraseña:</div>
+            <div class="form-group text-left">
+                <input [formGroup]="form" id="confirmPassword" formControlName="confirmPassword" class="form-control" style="width:200px;border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px"
+                    type="text" placeholder="Repetir contraseña" [(ngModel)]='repetir' /> </div>
+
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Las contraseñas no coinciden</div>
+
+
+
+            <br>
+            
+            <div  class="text-left">
+                <button   [disabled]="form.controls.confirmPassword.errors?.MatchPassword" id="btnRegistrar" class='btn btn-success' style='width:100px' style="margin-left: 12px" (click)="Registrar()">
+                    Crear Cuenta
+                </button>
+            </div>
+
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="text-center">Developed by:</div>
+            <h3 class="text-center">EquipoProyectoIntegador2</h3>
+
+
+        </div>
+    </div>

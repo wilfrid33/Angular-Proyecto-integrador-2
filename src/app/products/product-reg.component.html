@@ -1,0 +1,59 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+
+</script>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Registro de Platillos
+    </div>
+    <div class="panel-body">
+        <div class="row"   *ngIf='products' style="font-size:18px"  style="margin-left: 20px">
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Nombre de Platillo:</div>
+
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Nombre de platillo" [(ngModel)]='products.platoNombre' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Descripcion:</div>
+            <div class="text-left">
+                <input style="width:400px  ;border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Descripcion" [(ngModel)]='products.platodescrip' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Precio:</div>
+            <div class="text-left">
+                <input style="border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="Precio" [(ngModel)]='products.platoprice' /> </div>
+            <br>
+            <div class="text-left" style="font-size:18px ; margin-left:12px">Link de imagen:</div>
+            <div class="text-left">
+                <input style="width:400px ;border-color:cyan;border-radius:7px ; background-color:lavender ; margin-left:12px" type="text"
+                    placeholder="link de imagen" [(ngModel)]='products.imageUrl' /> </div>
+            <br>
+           
+          
+            
+            <div class="text-left">
+                <button id="btnRegistrar" class='btn btn-success' style='width:100px' style="margin-left: 12px" (click)="Registrar()">
+                    Crear Platillo
+                </button>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="text-center">Developed by:</div>
+    <h3 class="text-center">EquipoProyectoIntegador2</h3>
+
+
+</div>
