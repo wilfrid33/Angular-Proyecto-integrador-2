@@ -40,23 +40,7 @@
     <td colspan="5"> Cargando Data ...</td>
 </tr>
 
-                    <tr *ngFor='let product of filteredProducts'>
-                        <td>
-                            <img *ngIf='showImage'
-                                [src]='product.imageUrl'
-                                [title]='product.platoNombre'
-                                [style.width.px]='imageWidth'
-                                [style.margin.px]='imageMargin'>
-                        </td>
-                        <td><a [routerLink]="['/clients', product.platoId]">
-                                {{ product.platoNombre }}
-                            </a>
-						</td>
-                        <td>{{ product.platodescrip}}</td>
-                        
-                        <td>{{ product.platoprice | currency:'USD':true:'1.2-2'}}</td>
-                       
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
